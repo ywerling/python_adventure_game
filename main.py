@@ -1,5 +1,6 @@
 import time
 
+
 # Define the player character
 class Player:
     def __init__(self, name):
@@ -11,6 +12,7 @@ class Player:
     def level_up(self):
         self.level += 1
         print(f"{self.name} has leveled up! Now at level {self.level}.")
+
 
 # Define the mentor character
 class Mentor:
@@ -26,6 +28,7 @@ class Mentor:
         ]
         print(f"{self.name} says: {hints[player.level - 1]}")
 
+
 # Define a basic quest
 def enchanted_forest():
     print("\nWelcome to the Enchanted Forest!")
@@ -37,6 +40,7 @@ def enchanted_forest():
     print("Congratulations! You've completed the Enchanted Forest quest.\n")
     player.xp += 10
     player.level_up()
+
 
 def arcane_library():
     print("\nWelcome to the Arcane Library!")
@@ -51,6 +55,7 @@ def arcane_library():
         print("The door remains closed. Try again.\n")
         arcane_library()
 
+
 def crystal_caves():
     print("\nWelcome to the Crystal Caves!")
     print("Your task is to collect magical crystals using loops.")
@@ -61,9 +66,11 @@ def crystal_caves():
     player.xp += 30
     player.level_up()
 
+
 def dragons_lair():
     print("\nWelcome to the Dragon's Lair!")
     print("Your task is to use functions to create a healing spell.")
+
     def heal(creature):
         print(f"{creature} is healed!")
 
@@ -73,17 +80,20 @@ def dragons_lair():
     player.xp += 40
     player.level_up()
 
+
 def dark_tower():
     print("\nWelcome to the Dark Tower!")
-    print("Your final task is to combine all your skills to defeat Malakar the Corrupt.")
+    print("Your final task is to combine all your skills to defeat Malabar the Corrupt.")
+
     def attack(enemy):
         print(f"Attacked {enemy} with a powerful spell!")
 
     if player.level >= 5:
-        attack("Malakar the Corrupt")
-        print("Congratulations! You've defeated Malakar and lifted the dark spell.\n")
+        attack("Malabar the Corrupt")
+        print("Congratulations! You've defeated Malabar and lifted the dark spell.\n")
     else:
-        print("You need to be at least level 5 to face Malakar. Keep training!\n")
+        print("You need to be at least level 5 to face Malabar. Keep training!\n")
+
 
 # Main game loop
 def main():
@@ -109,6 +119,7 @@ def main():
     dark_tower()
 
     print("Thank you for playing Code Quest!")
+
 
 if __name__ == "__main__":
     main()
